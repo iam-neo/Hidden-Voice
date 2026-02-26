@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* ── Theme tokens ───────────────────────────────────── */
+@theme {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Lora', serif;
+
+  --color-cream: #FAF8F5;
+  --color-warm-50: #F5F0EB;
+  --color-warm-100: #EDE5DC;
+  --color-warm-200: #D9CFC4;
+  --color-warm-300: #B8A99A;
+  --color-warm-400: #9A8979;
+  --color-warm-500: #7D6B5A;
+  --color-warm-600: #5C4D3E;
+  --color-warm-700: #3D3229;
+  --color-warm-800: #2A221B;
+  --color-warm-900: #1A1510;
+
+  --color-ink: #2A221B;
+  --color-ink-light: #5C4D3E;
+  --color-ink-muted: #9A8979;
+
+  --color-mood-happy: #6B9B7D;
+  --color-mood-sad: #6B89A8;
+  --color-mood-reflective: #8B7BA8;
+  --color-mood-hopeful: #C4956A;
+  --color-mood-nostalgic: #A88B7B;
+  --color-mood-anxious: #B88B8B;
+
+  --color-accent: #8B7BA8;
+  --color-accent-soft: #D4CCE4;
+
+  --animate-fade-in: fade-in 0.6s ease-out both;
+  --animate-fade-up: fade-up 0.7s ease-out both;
+  --animate-slide-in: slide-in 0.5s ease-out both;
+}
+
+/* ── Keyframes ───────────────────────────────────── */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── Base styles ─────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ── Dark mode ───────────────────────────────────── */
+.dark body,
+.dark {
+  --color-cream: #1A1510;
+  --color-warm-50: #2A221B;
+  --color-warm-100: #3D3229;
+  --color-warm-200: #5C4D3E;
+  --color-warm-300: #7D6B5A;
+  --color-warm-400: #9A8979;
+  --color-warm-500: #B8A99A;
+  --color-warm-600: #D9CFC4;
+  --color-warm-700: #EDE5DC;
+  --color-warm-800: #F5F0EB;
+  --color-warm-900: #FAF8F5;
+
+  --color-ink: #F5F0EB;
+  --color-ink-light: #D9CFC4;
+  --color-ink-muted: #B8A99A;
+}
+
+/* ── Scrollbar ───────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-warm-300);
+  border-radius: 3px;
+}
+
+/* ── Selection ───────────────────────────────────── */
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-ink);
+}
+
+/* ── Story content typography ────────────────────── */
+.story-content p {
+  margin-bottom: 1.5em;
+  line-height: 1.9;
+  font-size: 1.125rem;
+}
+
+.story-content p:first-of-type::first-letter {
+  font-size: 3.2em;
+  float: left;
+  line-height: 1;
+  margin-right: 0.1em;
+  margin-top: 0.05em;
+  font-weight: 600;
+  color: var(--color-accent);
+}
