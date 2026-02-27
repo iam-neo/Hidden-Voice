@@ -104,6 +104,20 @@ Some people come into your life with words. Others come with rain boots, Chopin,
 
 The lavender bloomed in August. It smelled like trust.`,
     },
+    {
+        id: 4,
+        slug: "munmun-and-mr-nobody-intro",
+        title: "Munmun and Mr. Nobody - Intro",
+        mood: "reflective",
+        date: "2026-02-27",
+        series: "Munmun & Mr. Nobody",
+        excerpt: "Some stories don’t start with fireworks they start in quiet, impossible moments you barely notice… until they leave a mark.",
+        content: `Some stories don’t start with fireworks they start in quiet, impossible moments you barely notice… until they leave a mark. This is one of those stories. The names are changed, but everything else is real.
+
+Every glance, every word left unsaid, every sleepless night filled with questions and what-ifs this is the truth of Munmun and Mr. Nobody. You’ll see their first meetings, their awkward smiles, their unspoken fears, and the small, stolen moments that made life feel brighter… and then darker.
+
+Told by Mr. Nobody himself, this is a story of love, longing, suspense, and heartbreak the kind that makes you ache, the kind that doesn’t let go, even when people walk away and become strangers again.`
+    },
 ];
 
 export default stories;
