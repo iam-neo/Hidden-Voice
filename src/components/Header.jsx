@@ -9,6 +9,7 @@ export default function Header() {
 
     const navLinks = [
         { to: '/', label: 'Home' },
+        { to: '/series', label: 'Series' },
         { to: '/about', label: 'About' },
     ];
 
@@ -49,8 +50,8 @@ export default function Header() {
                             key={link.to}
                             to={link.to}
                             className={`font-heading text-sm font-medium tracking-wide transition-colors duration-200 ${isActive(link.to)
-                                    ? 'text-accent'
-                                    : 'text-ink-muted hover:text-ink'
+                                ? 'text-accent'
+                                : 'text-ink-muted hover:text-ink'
                                 }`}
                         >
                             {link.label}
@@ -120,8 +121,8 @@ export default function Header() {
                                 to={link.to}
                                 onClick={() => setMenuOpen(false)}
                                 className={`font-heading text-sm font-medium py-2 transition-colors duration-200 ${isActive(link.to)
-                                        ? 'text-accent'
-                                        : 'text-ink-muted hover:text-ink'
+                                    ? 'text-accent'
+                                    : 'text-ink-muted hover:text-ink'
                                     }`}
                             >
                                 {link.label}
