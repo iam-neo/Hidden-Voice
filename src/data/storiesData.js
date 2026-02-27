@@ -107,16 +107,26 @@ The lavender bloomed in August. It smelled like trust.`,
     {
         id: 4,
         slug: "munmun-and-mr-nobody-intro",
-        title: "Munmun and Mr. Nobody - Intro",
+        title: "Before It All Began",
         mood: "reflective",
         date: "2026-02-27",
         series: "Munmun & Mr. Nobody",
         excerpt: "Some stories don’t start with fireworks they start in quiet, impossible moments you barely notice… until they leave a mark.",
-        content: `Some stories don’t start with fireworks they start in quiet, impossible moments you barely notice… until they leave a mark. This is one of those stories. The names are changed, but everything else is real.
+        content: `The names are changed to protect privacy, but the memories, the emotions, and the scars are untouched. What you are about to read is not imagination. It is lived experience felt deeply, carried silently.
 
-Every glance, every word left unsaid, every sleepless night filled with questions and what-ifs this is the truth of Munmun and Mr. Nobody. You’ll see their first meetings, their awkward smiles, their unspoken fears, and the small, stolen moments that made life feel brighter… and then darker.
+This is the story of two strangers: Munmun and Mr. Nobody.
 
-Told by Mr. Nobody himself, this is a story of love, longing, suspense, and heartbreak the kind that makes you ache, the kind that doesn’t let go, even when people walk away and become strangers again.`
+They did not meet in extraordinary circumstances. There were no dramatic beginnings, no perfect timing. Just two separate lives moving in different directions… until one unexpected moment quietly connected them.
+
+What followed was not simple. There were first meetings filled with nervous energy, conversations layered with hesitation, smiles hiding anxiety, and silences heavy with unspoken feelings. There was warmth. There was confusion. There was hope.
+
+And then, slowly, there was distance.
+
+This is a story of love and fear. Of overthinking and vulnerability. Of holding on… and eventually letting go. It is about how two people can mean everything to each other for a season, and still end up as strangers again.
+
+I am Mr. Nobody.
+
+And this is how it all began..`
     },
 ];
 
