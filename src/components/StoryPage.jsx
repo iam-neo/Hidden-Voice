@@ -39,8 +39,16 @@ export default function StoryPage({ story, prevStory, nextStory }) {
 
             {/* Header */}
             <header className="mb-10 animate-fade-up">
-                <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center gap-3 mb-4 flex-wrap">
                     <MoodTag mood={story.mood} />
+                    {story.series && (
+                        <>
+                            <span className="text-warm-300">·</span>
+                            <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-warm-200/50 text-ink-muted text-xs font-heading tracking-wide border border-warm-300/30">
+                                Series: {story.series}
+                            </span>
+                        </>
+                    )}
                     <span className="text-warm-300">·</span>
                     <time className="font-heading text-sm text-ink-muted tracking-wide">
                         {formattedDate}

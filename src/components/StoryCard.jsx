@@ -40,7 +40,14 @@ export default function StoryCard({ story, index = 0, featured = false }) {
                     </p>
 
                     <div className="flex items-center justify-between flex-wrap gap-3">
-                        <MoodTag mood={story.mood} />
+                        <div className="flex items-center gap-2">
+                            <MoodTag mood={story.mood} />
+                            {story.series && (
+                                <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-warm-200/50 text-ink-muted text-xs font-heading tracking-wide border border-warm-300/30">
+                                    Series: {story.series}
+                                </span>
+                            )}
+                        </div>
                         <time className="font-heading text-xs text-ink-muted tracking-wide">
                             {formattedDate}
                         </time>
@@ -66,7 +73,14 @@ export default function StoryCard({ story, index = 0, featured = false }) {
         >
             <article className="rounded-xl border border-warm-200/60 bg-warm-50/50 p-6 transition-all duration-300 hover:border-warm-300 hover:bg-warm-50 hover:shadow-md hover:shadow-warm-200/20">
                 <div className="flex items-center justify-between flex-wrap gap-2 mb-3">
-                    <MoodTag mood={story.mood} />
+                    <div className="flex items-center gap-2">
+                        <MoodTag mood={story.mood} />
+                        {story.series && (
+                            <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-warm-200/50 text-ink-muted text-xs font-heading tracking-wide border border-warm-300/30">
+                                Series: {story.series}
+                            </span>
+                        )}
+                    </div>
                     <time className="font-heading text-xs text-ink-muted tracking-wide">
                         {formattedDate}
                     </time>
