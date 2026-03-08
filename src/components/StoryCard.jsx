@@ -1,12 +1,20 @@
 import { Link } from 'react-router-dom';
 import MoodTag from './MoodTag';
 
+function getReadingTime(content) {
+    const words = content ? content.split(/\s+/).length : 0;
+    const minutes = Math.max(1, Math.ceil(words / 200));
+    return `${minutes} min read`;
+}
+
 export default function StoryCard({ story, index = 0, featured = false }) {
     const formattedDate = new Date(story.date).toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
         day: 'numeric',
     });
+
+    const readingTime = getReadingTime(story.content);
 
     const excerpt =
         story.excerpt.length > 150
@@ -48,9 +56,18 @@ export default function StoryCard({ story, index = 0, featured = false }) {
                                 </span>
                             )}
                         </div>
-                        <time className="font-heading text-xs text-ink-muted tracking-wide">
-                            {formattedDate}
-                        </time>
+                        <div className="flex items-center gap-3">
+                            <span className="font-heading text-xs text-ink-muted tracking-wide flex items-center gap-1">
+                                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                                    <path d="M12 6v6l4 2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <circle cx="12" cy="12" r="10" />
+                                </svg>
+                                {readingTime}
+                            </span>
+                            <time className="font-heading text-xs text-ink-muted tracking-wide">
+                                {formattedDate}
+                            </time>
+                        </div>
                     </div>
 
                     {/* Read indicator */}
@@ -81,9 +98,18 @@ export default function StoryCard({ story, index = 0, featured = false }) {
                             </span>
                         )}
                     </div>
-                    <time className="font-heading text-xs text-ink-muted tracking-wide">
-                        {formattedDate}
-                    </time>
+                    <div className="flex items-center gap-3">
+                        <span className="font-heading text-xs text-ink-muted tracking-wide flex items-center gap-1">
+                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                                <path d="M12 6v6l4 2" strokeLinecap="round" strokeLinejoin="round" />
+                                <circle cx="12" cy="12" r="10" />
+                            </svg>
+                            {readingTime}
+                        </span>
+                        <time className="font-heading text-xs text-ink-muted tracking-wide">
+                            {formattedDate}
+                        </time>
+                    </div>
                 </div>
 
                 <h3 className="font-heading text-lg font-semibold text-ink mb-2 group-hover:text-accent transition-colors duration-200">
