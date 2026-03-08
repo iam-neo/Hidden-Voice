@@ -2,6 +2,8 @@ import { useState } from 'react';
 import stories from '../data/storiesData';
 import StoryCard from '../components/StoryCard';
 import Pagination from '../components/Pagination';
+import TypewriterText from '../components/TypewriterText';
+import FloatingParticles from '../components/FloatingParticles';
 
 const STORIES_PER_PAGE = 6;
 
@@ -23,14 +25,17 @@ export default function Home() {
     return (
         <main className="max-w-4xl mx-auto px-6 py-12 md:py-16">
             {/* Hero section */}
-            <section className="mb-14 animate-fade-in">
-                <h1 className="font-heading text-4xl md:text-5xl font-bold text-ink leading-tight mb-4">
-                    Hidden Voice
-                </h1>
-                <p className="text-ink-light text-lg md:text-xl leading-relaxed max-w-2xl">
-                    Anonymous stories from unnamed hearts. No names, no faces — just raw,
-                    honest words that deserve to be heard.
-                </p>
+            <section className="mb-14 relative overflow-hidden rounded-3xl p-8 md:p-12 -mx-2">
+                <FloatingParticles count={30} />
+                <div className="relative z-10">
+                    <h1 className="font-heading text-4xl md:text-5xl font-bold text-ink leading-tight mb-4 heading-glow">
+                        <TypewriterText text="Hidden Voice" speed={90} />
+                    </h1>
+                    <p className="text-ink-light text-lg md:text-xl leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: '1.2s' }}>
+                        Anonymous stories from unnamed hearts. No names, no faces — just raw,
+                        honest words that deserve to be heard.
+                    </p>
+                </div>
             </section>
 
             {/* Story of the Day */}
