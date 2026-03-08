@@ -140,3 +140,40 @@ body {
   font-weight: 600;
   color: var(--color-accent);
 }
+
+/* ── Typewriter cursor ──────────────────────────── */
+@keyframes blink-cursor {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: var(--color-accent);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink-cursor 0.8s step-end infinite;
+}
+
+/* ── Scroll progress bar ────────────────────────── */
+.scroll-progress-bar {
+  background: linear-gradient(90deg,
+      var(--color-accent) 0%,
+      var(--color-mood-hopeful) 50%,
+      var(--color-accent) 100%);
+  box-shadow: 0 0 8px var(--color-accent-soft);
+}
+
+/* ── Dark mode heading glow ─────────────────────── */
+.dark .heading-glow {
+  text-shadow: 0 0 30px color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
